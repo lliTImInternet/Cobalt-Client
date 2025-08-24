@@ -6,6 +6,7 @@
       ".Cobalt/ui/modules_list.json",
 
       ".Cobalt/ui/animations/hover.json",
+      ".Cobalt/ui/animations/news.json",
 
       ".Cobalt/ui/modules/armor_hud.json",
       ".Cobalt/ui/modules/bow_indicator.json",

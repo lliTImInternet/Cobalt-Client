@@ -15,6 +15,14 @@
                   "100%c",
                   "100%c"
                 ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "news_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
                 "controls": [
                   {
                     "label1@Cobalt_common.internal": {
@@ -247,6 +255,99 @@
               }
             }
           ]
+        },
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": [
+            {
+              "news@Cobalt_toggle.content": {
+                "$toggle_view_binding_name": "news_toggle",
+                "$custom_content": "start.news_toggle_content",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "$default_alpha": 0,
+                "$hover_alpha": 0,
+                "$pressed_alpha": 0,
+                "$pressed_hover_alpha": 0,
+                "offset": [
+                  -2,
+                  -16
+                ],
+                "$hover_offset": "@Cobalt_news_animation.1_offset",
+                "$pressed_hover_offset": "@Cobalt_news_animation.1_offset",
+                "size": [
+                  100,
+                  50
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "news_toggle_content@Cobalt_common.internal": {
+      "$Cobalt_internal": "rounded_bg",
+      "color": "@Cobalt_news_animation.1_color",
+      "layer": 10,
+      "size": [
+        100,
+        50
+      ],
+      "controls": [
+        {
+          "drop_shadow@Cobalt_common.internal": {
+            "$Cobalt_internal": "rounded_bg",
+            "alpha": 0.5,
+            "layer": -1,
+            "color": [
+              0,
+              0,
+              0
+            ],
+            "offset": [
+              2,
+              2
+            ],
+            "size": [
+              "100%",
+              "100%"
+            ]
+          }
+        },
+        {
+          "logo@Cobalt_common.internal": {
+            "$Cobalt_internal": "logo",
+            "$Cobalt_anchor": "center",
+            "layer": 11,
+            "offset": [
+              0,
+              -5
+            ],
+            "size": [
+              30,
+              30
+            ]
+          }
+        },
+        {
+          "text@Cobalt_common.element": {
+            "$Cobalt_type": "label",
+            "text": "§bCobalt §fClient",
+            "font_type": "$cobalt_font",
+            "$Cobalt_anchor": "center",
+            "shadow": true,
+            "font_scale_factor": 1.2,
+            "layer": 11,
+            "offset": [
+              0,
+              16  
+            ],
+            "size": [
+              "default",
+              13
+            ]
+          }
         }
       ]
     }

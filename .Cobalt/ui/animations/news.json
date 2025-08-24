@@ -1,0 +1,117 @@
+{
+    "namespace": "Cobalt_news_animation",
+    "1_offset": {
+        "anim_type": "offset",
+        "easing": "linear",
+        "duration": 0.5,
+        "from": [
+            -2,
+            -16
+        ],
+        "to": [
+            -4,
+            -14
+        ]
+    },
+
+    "1_color": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [
+            0.23,
+            0.77,
+            0.39
+        ],
+        "to": [
+            0.29,
+            0.23,
+            0.77
+        ],
+        "next": "@Cobalt_news_animation.2_color"
+    },
+    "2_color": {
+        "anim_type": "wait",
+        "duration": 4,
+        "next": "@Cobalt_news_animation.3_color"
+    },
+    "3_color": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [
+            0.29,
+            0.23,
+            0.77
+        ],
+        "to": [
+            0.67,
+            0.23,
+            0.77
+        ],
+        "next": "@Cobalt_news_animation.4_color"
+    },
+    "4_color": {
+        "anim_type": "wait",
+        "duration": 4,
+        "next": "@Cobalt_news_animation.5_color"
+    },
+    "5_color": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [
+            0.67,
+            0.23,
+            0.77
+        ],
+        "to": [
+            0.70,
+            0.77,
+            0.23
+        ],
+        "next": "@Cobalt_news_animation.6_color"
+    },
+    "6_color": {
+        "anim_type": "wait",
+        "duration": 4,
+        "next": "@Cobalt_news_animation.7_color"
+    },
+    "7_color": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [
+            0.70,
+            0.77,
+            0.23
+        ],
+        "to": [
+            0.77,
+            0.23,
+            0.44
+        ],
+        "next": "@Cobalt_news_animation.8_color"
+    },
+    "8_color": {
+        "anim_type": "wait",
+        "duration": 4,
+        "next": "@Cobalt_news_animation.9_color"
+    },
+    "9_color": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [
+            0.77,
+            0.23,
+            0.44
+        ],
+        "to": [
+            0.23,
+            0.77,
+            0.39
+        ],
+        "next": "@Cobalt_news_animation.10_color"
+    },
+    "10_color": {
+        "anim_type": "wait",
+        "duration": 4,
+        "next": "@Cobalt_news_animation.1_color"
+    }
+}
