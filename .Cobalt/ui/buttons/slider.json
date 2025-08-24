@@ -1,0 +1,182 @@
+{
+    "namespace": "Cobalt_slider",
+    "Cobalt_slider@common.slider": {
+      "$option_enabled_binding_name": "slider_enabled",
+      "$slider_name": "Cobalt_slider",
+      "$slider_box_layout": "Cobalt_slider.Cobalt_slider_button_default",
+      "$slider_box_hover_layout": "Cobalt_slider.Cobalt_slider_button_hover",
+      "$slider_box_indent_layout": "Cobalt_slider.Cobalt_slider_button_default",
+      "$slider_box_locked_layout": "Cobalt_slider.Cobalt_slider_button_default",
+      "$option_label": "",
+      "$Cobalt_slider_toggle_tags|default": 0,
+      "$Cobalt_slider_steps|default": 1,
+      "$Cobalt_slider_value_bindings|default": "(((#slider_steps * 0) + $Cobalt_slider_toggle_tags) * 10)",
+      "property_bag": {
+        "#slider_steps": "$Cobalt_slider_steps"
+      },
+      "bindings": [
+        {
+          "binding_name": "#slider_steps"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "$Cobalt_slider_value_bindings",
+          "target_property_name": "#slider_value"
+        }
+      ],
+      "factory": "$Cobalt_factory",
+      "$Cobalt_factory|default": {
+        "name": "slider_step_factory",
+        "control_ids": {
+          "slider_step": "@Cobalt_slider.Cobalt_step",
+          "slider_step_hover": "@Cobalt_slider.Cobalt_step",
+          "slider_step_progress": "@Cobalt_slider.Cobalt_step",
+          "slider_step_progress_hover": "@Cobalt_slider.Cobalt_step"
+        }
+      },
+      "controls": [
+        {
+          "slider_box@common.slider_box": {}
+        },
+        {
+          "slider_bar_default@Cobalt_slider.Cobalt_slider_bar_default": {}
+        },
+        {
+          "slider_bar_hover@Cobalt_slider.Cobalt_slider_bar_hover": {}
+        }
+      ]
+    },
+    "Cobalt_slider_background@Cobalt_common.internal": {
+      "$Cobalt_internal": "circle",
+      "color": "$reverse_color",
+      "layer": 1,
+      "size": [
+        "100%",
+        5
+      ]
+    },
+    "Cobalt_step@Cobalt_common.internal": {
+      "$Cobalt_internal": "White",
+      "color": "$second_color",
+      "alpha": 0,
+      "layer": 3,
+      "size": [
+        1,
+        4
+      ]
+    },
+    "Cobalt_slider_progress@Cobalt_common.internal": {
+      "$Cobalt_internal": "circle",
+      "color": "$reverse_color",
+      "layer": 2,
+      "size": [
+        "100%",
+        5
+      ]
+    },
+    "Cobalt_slider_button_default@Cobalt_common.internal": {
+      "$Cobalt_internal": "circle_2",
+      "color": "$reverse_color",
+      "layer": 10,
+      "offset": [
+        0,
+        -4
+      ],
+      "size": [
+        12,
+        12
+      ]
+    },
+    "Cobalt_slider_button_hover@Cobalt_common.internal": {
+      "$Cobalt_internal": "circle_2",
+      "color": "$reverse_color",
+      "layer": 100,
+      "offset": [
+        0,
+        -4
+      ],
+      "size": [
+        12,
+        12
+      ]
+    },
+    "Cobalt_slider_panel": {
+      "type": "panel",
+      "layer": 100,
+      "clips_children": false,
+      "controls": [
+        {
+          "$Cobalt_slider_binding_controls_name@Cobalt_slider": {
+            "size": [
+              "100% - 2px",
+              "100% - 2px"
+            ]
+          }
+        }
+      ]
+    },
+    "Cobalt_slider_bar_default@Cobalt_slider_bar": {
+      "color": "$slider_hover_border_color",
+      "$background_control": "Cobalt_slider.Cobalt_slider_background",
+      "$progress_control": "Cobalt_slider.Cobalt_slider_progress",
+      "$background_control_name": "slider_background",
+      "$progress_control_name": "slider_progress"
+    },
+    "Cobalt_slider_bar_hover@Cobalt_slider_bar": {
+      "color": "$slider_hover_border_color",
+      "$background_control": "Cobalt_slider.Cobalt_slider_background",
+      "$progress_control": "Cobalt_slider.Cobalt_slider_progress",
+      "$background_control_name": "slider_background_hover",
+      "$progress_control_name": "slider_progress_hover"
+    },
+    "Cobalt_slider_bar": {
+      "type": "panel",
+      "controls": [
+        {
+          "sizing_panel": {
+            "type": "panel",
+            "controls": [
+              {
+                "$background_control_name@$background_control": {
+                  "layer": 1
+                }
+              },
+              {
+                "$progress_control_name@$progress_control": {
+                  "layer": 3,
+                  "clip_direction": "left",
+                  "clip_pixelperfect": false
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Cobalt_slider_text": {
+      "type": "panel",
+      "size": [
+        "100%",
+        "100%cm"
+      ],
+      "controls": [
+        {
+          "label@Cobalt_design.content": {
+            "type": "label",
+            "text": "$Cobalt_slider_text",
+            "font_type": "$cobalt_font",
+            "anchor_from": "left_middle",
+            "anchor_to": "left_middle",
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "$slider_name_controls",
+                "source_property_name": "(#slider_value = $slider_value)",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

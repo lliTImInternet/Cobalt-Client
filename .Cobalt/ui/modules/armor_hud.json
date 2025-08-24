@@ -1,0 +1,25 @@
+{
+    "namespace": "Cobalt_armor_hud",
+    "content@Cobalt_common.element": {
+      "$Cobalt_type": "custom",
+      "renderer": "live_player_renderer",
+      "$Cobalt_anchor": "bottom_right",
+      "layer": 21,
+      "offset": [
+        -8,
+        1150
+      ],
+      "size": [
+        18,
+        18
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "Cobalt_armor_hud_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    }
+  }

@@ -1,0 +1,76 @@
+{
+    "namespace": "Cobalt_modules_row_4",
+    "content@Cobalt_common.element": {
+        "$Cobalt_type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            80
+        ],
+        "controls": [
+            {
+                "spacer1@Cobalt_common.element": {
+                    "size":[
+                        10,
+                        10
+                    ]
+                }
+            },
+            {
+                "module4@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/plus",
+                    "$Cobalt_modules_menu_button_template_button_name": "none",
+                    "$Cobalt_modules_menu_button_template_settings_name": "none",
+                    "$toggle_tags": ""
+                }
+            },
+            {
+                "spacer2@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "module4@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/plus",
+                    "$Cobalt_modules_menu_button_template_button_name": "none",
+                    "$Cobalt_modules_menu_button_template_settings_name": "none",
+                    "$toggle_tags": ""
+                }
+            },
+            {
+                "spacer3@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "module3@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/plus",
+                    "$Cobalt_modules_menu_button_template_button_name": "none",
+                    "$Cobalt_modules_menu_button_template_settings_name": "none"
+                }
+            },
+            {
+                "spacer4@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "module4@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/plus",
+                    "$Cobalt_modules_menu_button_template_button_name": "none",
+                    "$Cobalt_modules_menu_button_template_settings_name": "none",
+                    "$toggle_tags": ""
+                }
+            }
+        ]
+    }
+}

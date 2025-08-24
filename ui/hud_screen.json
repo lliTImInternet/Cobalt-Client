@@ -1,0 +1,37 @@
+{
+  "namespace": "hud",
+  "vignette_renderer": {
+    "ignored": true
+  },
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "1@Cobalt_modules_menu_base.Cobalt_modules_menu_button": {}
+          },
+          {
+            "2@Cobalt_modules_menu_base.Cobalt_modules_menu": {}
+          },
+          {
+            "3@Cobalt_modules_list.content": {}
+          },
+          {
+            "4@Cobalt_fullbright.content": {}
+          }
+        ]
+      }
+    ]
+  },
+  "hud_screen": {
+    "always_accepts_input": true,
+    "send_telemetry": false,
+    "should_steal_mouse": true,
+    "render_only_when_topmost": false,
+    "$use_loading_bars": false,
+    "cache_screen": true,
+    "$screen_animations": []
+  }
+}

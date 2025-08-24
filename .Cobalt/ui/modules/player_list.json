@@ -1,0 +1,279 @@
+{
+  "namespace": "Cobalt_player_list",
+  "tab_playerlist": {
+    "type": "button",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": -2,
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.scoreboard",
+        "to_button_id": "button.scoreboard",
+        "mapping_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "default": {
+          "type": "input_panel",
+          "$button_mappings": [
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.hotbar_inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.hotbar_inventory_right",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "input_panel",
+          "$button_mappings": [
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.hotbar_inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.hotbar_inventory_right",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "player_list@Cobalt_player_list.player_list": {}
+            }
+          ]
+        }
+      },
+      {
+        "playerlist_mobile": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#inventory_touch_button",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "mobile_panel": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#inventory_touch_button",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_player_list_toggle2",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "player_list@Cobalt_player_list.player_list": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "player_list_button@Cobalt_toggle.content": {
+    "$toggle_view_binding_name": "Cobalt_player_list_toggle2",
+    "$button_text": "P",
+    "type": "input_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "prevent_touch_input": true,
+    "layer": 4,
+    "offset": [
+      -40,
+      1
+    ],
+    "size": [
+      18,
+      18
+    ],
+    "bindings": [
+      {
+        "binding_name": "#inventory_touch_button",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+  "player_list": {
+    "type": "panel",
+    "size": [
+      "25%",
+      "85%"
+    ],
+    "layer": 1,
+    "offset": [
+      0,
+      3
+    ],
+    "controls": [
+      {
+        "player_list_grid@Cobalt_common.element": {
+          "$Cobalt_type": "grid",
+          "collection_name": "players_collection",
+          "grid_dimension_binding": "#players_grid_dimension",
+          "grid_item_template": "Cobalt_player_list.player_list_grid",
+          "$Cobalt_anchor": "top_middle",
+          "offset": [
+            "-101% - 0.75px",
+            0
+          ],
+          "size": [
+            "90%",
+            "100%c"
+          ],
+          "bindings": [
+            {
+              "binding_condition": "always",
+              "binding_name": "#players_grid_dimension"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "player_list_grid@Cobalt_common.element": {
+    "$Cobalt_anchor": "top_middle",
+    "size": [
+      "25%",
+      11
+    ],
+    "controls": [
+      {
+        "background@Cobalt_common.internal": {
+          "$Cobalt_internal": "White",
+          "color": "$pure_color",
+          "size": [
+            "400% + 0.9px",
+            12
+          ],
+          "alpha": 0.5,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "player_list_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "grid_avatar@Cobalt_common.element": {
+                "$Cobalt_type": "image",
+                "texture": "#texture",
+                "texture_file_system": "#texture_source",
+                "$Cobalt_anchor": "left_middle",
+                "layer": 2,
+                "offset": [
+                  2,
+                  0
+                ],
+                "size": [
+                  8,
+                  8
+                ],
+                "bindings": [
+                  {
+                    "binding_collection_name": "players_collection",
+                    "binding_name": "#texture",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_collection_name": "players_collection",
+                    "binding_name": "#texture_source",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_player_list_gamer_icon_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "player_gamertag@Cobalt_common.element": {
+                "$Cobalt_type": "label",
+                "text": "#gamertag",
+                "font_type": "smooth",
+                "layer": 3,
+                "font_scale_factor": 1,
+                "size": [
+                  "default",
+                  10
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#gamertag",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content@Cobalt_common.element": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Cobalt_player_list_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "1@tab_playerlist": {}
+      },
+      {
+        "2@player_list_button": {}
+      }
+    ]
+  }
+}

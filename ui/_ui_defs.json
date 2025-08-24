@@ -1,0 +1,36 @@
+{
+  "ui_defs": [
+      "config.json",
+      ".Cobalt/ui/design.json",
+      ".Cobalt/ui/common.json",
+      ".Cobalt/ui/modules_list.json",
+
+      ".Cobalt/ui/animations/hover.json",
+
+      ".Cobalt/ui/modules/armor_hud.json",
+      ".Cobalt/ui/modules/bow_indicator.json",
+      ".Cobalt/ui/modules/directionhud.json",
+      ".Cobalt/ui/modules/fullbright.json",
+      ".Cobalt/ui/modules/pack_display.json",
+      ".Cobalt/ui/modules/player_list.json",
+
+      ".Cobalt/ui/buttons/button.json",
+      ".Cobalt/ui/buttons/exit_toggle.json",
+      ".Cobalt/ui/buttons/slider.json",
+      ".Cobalt/ui/buttons/toggle.json",
+
+      ".Cobalt/ui/screens/hud/modules_menu_base.json",
+      ".Cobalt/ui/screens/hud/modules_menu_button_template.json",
+      ".Cobalt/ui/screens/hud/pages/modules_page.json",
+      ".Cobalt/ui/screens/hud/pages/settings_pages.json",
+      ".Cobalt/ui/screens/hud/pages/settings/armor_hud.json",
+      ".Cobalt/ui/screens/hud/pages/settings/bow_indicator.json",
+      ".Cobalt/ui/screens/hud/pages/settings/directionhud.json",
+      ".Cobalt/ui/screens/hud/pages/settings/pack_display.json",
+      ".Cobalt/ui/screens/hud/pages/settings/player_list.json",
+      ".Cobalt/ui/screens/hud/rows/modules_row_1.json",
+      ".Cobalt/ui/screens/hud/rows/modules_row_2.json",
+      ".Cobalt/ui/screens/hud/rows/modules_row_3.json",
+      ".Cobalt/ui/screens/hud/rows/modules_row_4.json"
+  ]
+}

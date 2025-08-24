@@ -1,0 +1,86 @@
+{
+    "namespace": "Cobalt_modules_menu_modules_page",
+    "content@common.scrolling_panel": {
+        "$scrolling_content": "Cobalt_modules_menu_modules_page.scroll_content",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "$show_background": false,
+        "$always_handle_scrolling": true,
+        "layer": 18,
+        "$scroll_size": [
+            3,
+            "100%"
+        ],
+        "$scroll_bar_left_padding_size": [
+            5,
+            5
+        ],
+        "size": [
+            "100%",
+            "100%"
+        ]
+    },
+    "scroll_content@Cobalt_common.element": {
+        "$Cobalt_type": "stack_panel",
+        "orientation": "vertical",
+        "$Cobalt_anchor": "top_middle",
+        "size": [
+            "100%",
+            "100%c + 15px"
+        ],
+        "controls": [
+            {
+                "spacer1@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "row1@Cobalt_modules_row_1.content": {}
+            },
+            {
+                "spacer2@Cobalt_common.element": {
+                    "size":[
+                        25,
+                        25
+                    ]
+                }
+            },
+            {
+                "row2@Cobalt_modules_row_2.content": {}
+            },
+            {
+                "spacer3@Cobalt_common.element": {
+                    "size":[
+                        25,
+                        25
+                    ]
+                }
+            },
+            {
+                "row3@Cobalt_modules_row_3.content": {}
+            },
+            {
+                "spacer4@Cobalt_common.element": {
+                    "size":[
+                        25,
+                        25
+                    ]
+                }
+            },
+            {
+                "row4@Cobalt_modules_row_4.content": {}
+            },
+            {
+                "spacer5@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            }
+        ]
+    }
+}

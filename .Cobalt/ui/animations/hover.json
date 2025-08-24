@@ -1,0 +1,103 @@
+{
+    "namespace": "Cobalt_hover_animation",
+
+    "1_alpha": {
+        "anim_type": "alpha",
+        "duration": 0.5,
+        "from": 0,
+        "to": 0.3,
+        "next": "@Cobalt_hover_animation.2_alpha"
+    },
+    "2_alpha": {
+        "anim_type": "wait",
+        "duration": 1,
+        "next": "@Cobalt_hover_animation.3_alpha"
+    },
+    "3_alpha": {
+        "anim_type": "alpha",
+        "duration": 0.5,
+        "from": 0.3,
+        "to": 0,
+        "next": "@Cobalt_hover_animation.4_alpha"
+    },
+    "4_alpha": {
+        "anim_type": "wait",
+        "duration": 0.5,
+        "next": "@Cobalt_hover_animation.1_alpha"
+    },
+
+    "1_color_red": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [1, 0, 0],
+        "to": [1, 0.4, 0.4],
+        "next": "@Cobalt_hover_animation.2_color_red"
+    },
+    "2_color_red": {
+        "anim_type": "wait",
+        "duration": 1,
+        "next": "@Cobalt_hover_animation.3_color_red"
+    },
+    "3_color_red": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [1, 0.4, 0.4],
+        "to": [1, 0, 0],
+        "next": "@Cobalt_hover_animation.4_color_red"
+    },
+    "4_color_red": {
+        "anim_type": "wait",
+        "duration": 0.5,
+        "next": "@Cobalt_hover_animation.1_color_red"
+    },
+
+    "1_color_green": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [0, 1, 0],
+        "to": [0.4, 1, 0.4],
+        "next": "@Cobalt_hover_animation.2_color_green"
+    },
+    "2_color_green": {
+        "anim_type": "wait",
+        "duration": 1,
+        "next": "@Cobalt_hover_animation.3_color_green"
+    },
+    "3_color_green": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [0.4, 1, 0.4],
+        "to": [0, 1, 0],
+        "next": "@Cobalt_hover_animation.1_color_green"
+    },
+    "4_color_green": {
+        "anim_type": "wait",
+        "duration": 0.5,
+        "next": "@Cobalt_hover_animation.1_color_green"
+    },
+
+    "1_color_gray": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [0.341, 0.341, 0.341],
+        "to": [0.478, 0.478, 0.478],
+        "next": "@Cobalt_hover_animation.2_color_gray"
+    },
+    "2_color_gray": {
+        "anim_type": "wait",
+        "duration": 1,
+        "next": "@Cobalt_hover_animation.3_color_gray"
+    },
+    "3_color_gray": {
+        "anim_type": "color",
+        "duration": 0.5,
+        "from": [0.478, 0.478, 0.478],
+        "to": [0.341, 0.341, 0.341],
+        "next": "@Cobalt_hover_animation.4_color_gray"
+    },
+    "4_color_gray": {
+        "anim_type": "wait",
+        "duration": 0.5,
+        "next": "@Cobalt_hover_animation.1_color_gray"
+    }
+}

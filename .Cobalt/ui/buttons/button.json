@@ -1,0 +1,151 @@
+{
+  "namespace": "Cobalt_button",
+  "main_button@common.button": {
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Cobalt_button.default": {
+          "$default_texture": "rounded_bg",
+          "alpha": 0.5,
+          "color": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "hover@Cobalt_button.hover": {
+          "$hover_texture": "rounded_bg",
+          "alpha": 0.5
+        }
+      },
+      {
+        "pressed@Cobalt_button.pressed": {
+          "$pressed_texture": "rounded_bg",
+          "alpha": 0.5
+        }
+      },
+      {
+        "locked@Cobalt_button.locked": {
+          "$locked_texture": "rounded_bg",
+          "alpha": 0.5
+        }
+      }
+    ]
+  },
+  "default@Cobalt_button.button_content": {
+    "$default": true,
+    "$button_state_texture": "$default_texture"
+  },
+  "hover@Cobalt_button.button_content": {
+    "$hover": true,
+    "$button_state_texture": "$hover_texture"
+  },
+  "pressed@Cobalt_button.button_content": {
+    "$pressed": true,
+    "$button_state_texture": "$pressed_texture"
+  },
+  "locked@Cobalt_button.button_content": {
+    "$locked": true,
+    "$button_state_texture": "$locked_texture"
+  },
+  "button_content": {
+    "type": "image",
+    "texture": "('.Cobalt/textures/' + $button_state_texture)",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "$custom_content|default": "Cobalt_button.button_label",
+    "$button_bindings|default": [],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "mapping_type": "pressed",
+        "to_button_id": "button.menu_select"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "mapping_type": "focused",
+        "to_button_id": "button.menu_ok"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      }
+    ],
+    "controls": [
+      {
+        "custom_content@$custom_content": {}
+      }
+    ]
+  },
+  "button_icon": {
+    "layer": 2,
+    "texture": "$button_icon",
+    "type": "image",
+    "size": "$button_icon_size",
+    "color": "$icon_color",
+    "$icon_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$button_icon_size|default": [
+      15,
+      15
+    ]
+  },
+  "button_label@Cobalt_design.content": {
+    "type": "label",
+    "text": "$button_text",
+    "shadow": "$shadow",
+    "$shadow|default": false,
+    "font_scale_factor": "$font_scale_factor",
+    "$font_scale_factor|default": 1,
+    "layer": 10,
+    "font_type": "$cobalt_font",
+    "size": [
+      "default",
+      "default"
+    ],
+    "color": "$text_color",
+    "$text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ],
+    "offset": "$button_text_offset",
+    "$button_text_offset|default": [
+      0,
+      0
+    ]
+  },
+  "label_hover_text": {
+    "type": "panel",
+    "$button_content_hover_text|default": "Cobalt_button.button_label",
+    "controls": [
+      {
+        "1@Cobalt_common.hover_text_template": {}
+      },
+      {
+        "2@$button_content_hover_text": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.player.pepe_mods": {
+            "loop": true,
+            "bones": {
+                "pepe_directionhud": {
+                    "position": [
+                        -37.9,
+                        3000,
+                        20
+                    ],
+                    "rotation": [
+                        "(query.is_gliding ? -query.body_x_rotation + -90)",
+                        "(query.is_riding ? query.target_y_rotation)",
+                        0
+                    ],
+                    "scale": 5.13
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "namespace": "Cobalt_modules_menu_button_template",
+    "content@Cobalt_common.internal": {
+        "$Cobalt_internal": "rounded_bg",
+        "color": "$second_color",
+        "layer": 1,
+        "size": [
+            "23%",
+            100
+        ],
+        "controls": [
+            {
+                "icon@Cobalt_common.element": {
+                    "$Cobalt_type": "image",
+                    "$Cobalt_anchor": "center",
+                    "texture": "$Cobalt_modules_menu_button_template_icon",
+                    "layer": 2,
+                    "offset": [
+                        0,
+                        -5
+                    ],
+                    "size": [
+                        "50%",
+                        "50%"
+                    ]
+                }
+            },
+            {
+                "button@Cobalt_toggle.content": {
+                    "$toggle_view_binding_name": "$Cobalt_modules_menu_button_template_button_name",
+                    "$custom_content": "Cobalt_toggle.module_toggle_text",
+                    "$button_default_texture": ".Cobalt/textures/mod_menu/module_toggle",
+                    "$button_hover_texture": ".Cobalt/textures/mod_menu/module_toggle",
+                    "$button_pressed_texture": ".Cobalt/textures/mod_menu/module_toggle",
+                    "$button_pressed_hover_texture": ".Cobalt/textures/mod_menu/module_toggle",
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "$toggle_name": "Cobalt_modules_toggle",
+                    "$toggle_tab_focus_binding_name": "#Cobalt_modules_focus_precedence",
+                    "$toggle_tab_focus_binding_type": "global",
+                    "$toggle_on_hover_binding_type": "global",
+                    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+                    "size": "$Cobalt_modules_menu_button_template_size",
+                    "layer": 2,
+                    "$Cobalt_modules_menu_button_template_size|default": [
+                        "100% - 20px",
+                        20
+                    ],
+                    "$default_color": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "$hover_color": "@Cobalt_hover_animation.1_color_red",
+                    "$pressed_color": [
+                        0,
+                        1,
+                        0.129
+                    ],
+                    "$pressed_hover_color": "@Cobalt_hover_animation.1_color_green"
+                }
+            },
+            {
+                "settings@Cobalt_toggle.Cobalt_tab_toggle": {
+                    "$toggle_view_binding_name": "$Cobalt_modules_menu_button_template_settings_name",
+                    "$toggle_group_forced_index": "$Cobalt_modules_menu_button_template_settings_index",
+                    "$button_icon": ".Cobalt/textures/icons/settings",
+                    "$custom_content": "Cobalt_button.button_icon",
+                    "$button_default_texture": ".Cobalt/textures/mod_menu/module_settings",
+                    "$button_hover_texture": ".Cobalt/textures/mod_menu/module_settings",
+                    "$button_pressed_texture": ".Cobalt/textures/mod_menu/module_settings",
+                    "$button_pressed_hover_texture": ".Cobalt/textures/mod_menu/module_settings",
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "ignored": "$Cobalt_modules_menu_button_template_settings_ignored",
+                    "$Cobalt_modules_menu_button_template_settings_ignored|default": false,
+                    "layer": 2,
+                    "size": [
+                        20,
+                        20
+                    ],
+                    "$default_color": [
+                        0.341,
+                        0.341,
+                        0.341
+                    ],
+                    "$hover_color": "@Cobalt_hover_animation.1_color_gray",
+                    "$pressed_color": [
+                        0.341,
+                        0.341,
+                        0.341
+                    ],
+                    "$pressed_hover_color": "@Cobalt_hover_animation.1_color_gray",
+                    "$icon_color": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            }
+        ]
+    }
+}

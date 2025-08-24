@@ -1,0 +1,78 @@
+{
+    "namespace": "Cobalt_modules_row_2",
+    "content@Cobalt_common.element": {
+        "$Cobalt_type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            80
+        ],
+        "controls": [
+            {
+                "spacer1@Cobalt_common.element": {
+                    "size":[
+                        10,
+                        10
+                    ]
+                }
+            },
+            {
+                "fullbright@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/eye",
+                    "$Cobalt_modules_menu_button_template_button_name": "Cobalt_pack_fullbright_toggle",
+                    "$Cobalt_modules_menu_button_template_settings_name": "Cobalt_pack_fullbright_settings",
+                    "$Cobalt_modules_menu_button_template_settings_index": 8,
+                    "$toggle_tags": "$fullbright"
+                }
+            },
+            {
+                "spacer2@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "bow_indicator@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/statistik",
+                    "$Cobalt_modules_menu_button_template_button_name": "Cobalt_bow_indicator_toggle",
+                    "$Cobalt_modules_menu_button_template_settings_name": "Cobalt_bow_indicator_settings",
+                    "$Cobalt_modules_menu_button_template_settings_index": 9,
+                    "$toggle_tags": "$bow_indicator"
+                }
+            },
+            {
+                "spacer3@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "module3@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/plus",
+                    "$Cobalt_modules_menu_button_template_button_name": "none",
+                    "$Cobalt_modules_menu_button_template_settings_name": "none"
+                }
+            },
+            {
+                "spacer4@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "module4@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/plus",
+                    "$Cobalt_modules_menu_button_template_button_name": "none",
+                    "$Cobalt_modules_menu_button_template_settings_name": "none",
+                    "$toggle_tags": ""
+                }
+            }
+        ]
+    }
+}

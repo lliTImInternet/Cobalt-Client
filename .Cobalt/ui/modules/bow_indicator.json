@@ -1,0 +1,24 @@
+{
+    "namespace": "Cobalt_bow_indicator",
+    "content@Cobalt_common.element": {
+      "$Cobalt_type": "custom",
+      "renderer": "live_player_renderer",
+      "layer": 21,
+      "offset": [
+        -0.5,
+        483
+      ],
+      "size": [
+        14,
+        14
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "Cobalt_bow_indicator_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    }
+  }

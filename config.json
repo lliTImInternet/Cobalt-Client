@@ -1,0 +1,18 @@
+{"namespace": "config","1": {"type": "panel",
+
+        "$pack_display": true,
+        "$pack_display_opacity": 0.5,
+
+        "$armor_hud": true,
+
+        "$direction_hud": true,
+        "$direction_hud_opacity": 0.5,
+
+        "$palyer_list": true,
+        "$gamer_icon": true,
+        "$player_list_opacity": 0.5,
+
+        "$fullbright": false,
+
+        "$bow_indicator": true
+}}

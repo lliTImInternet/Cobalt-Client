@@ -1,0 +1,157 @@
+{
+  "namespace": "Cobalt_exit_toggle",
+  "toggle_unchecked@Cobalt_exit_toggle.toggle_content": {
+    "type": "image",
+    "texture": "$button_default_texture",
+    "$button_default_texture|default": ".Cobalt/textures/rounded_bg",
+    "$text_color": "$default_text_color",
+    "color": "$default_color",
+    "$default|default": true,
+    "alpha": "$default_alpha",
+    "$default_alpha|default": 1,
+    "$default_color|default": [
+      0,
+      0,
+      0
+    ],
+    "$default_text_color|default": [
+      1,
+      1,
+      1
+    ]
+  },
+  "toggle_unchecked_hover@Cobalt_exit_toggle.toggle_content": {
+    "type": "image",
+    "texture": "$button_hover_texture",
+    "$button_hover_texture|default": ".Cobalt/textures/rounded_bg",
+    "alpha": "$hover_alpha",
+    "color": "$hover_color",
+    "$pressed|default": true,
+    "$hover_alpha|default": 1,
+    "$text_color": "$hover_text_color",
+    "$hover_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$hover_text_color|default": [
+      1,
+      1,
+      1
+    ]
+  },
+  "toggle_checked@Cobalt_exit_toggle.toggle_content": {
+    "type": "image",
+    "texture": "$button_pressed_texture",
+    "$button_pressed_texture|default": ".Cobalt/textures/rounded_bg",
+    "$text_color": "$pressed_text_color",
+    "color": "$pressed_color",
+    "$hover|default": true,
+    "alpha": "$pressed_alpha",
+    "$pressed_alpha|default": 1,
+    "$pressed_color|default": [
+      0,
+      0,
+      0
+    ],
+    "$pressed_text_color|default": [
+      1,
+      1,
+      1
+    ]
+  },
+  "toggle_checked_hover@Cobalt_exit_toggle.toggle_content": {
+    "type": "image",
+    "texture": "$button_pressed_hover_texture",
+    "$button_pressed_hover_texture|default": ".Cobalt/textures/rounded_bg",
+    "$text_color": "$pressed_hover_text_color",
+    "color": "$pressed_hover_color",
+    "alpha": "$pressed_hover_alpha",
+    "$hover|default": true,
+    "$default_hover_alpha|default": 1,
+    "$pressed_hover_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$pressed_hover_text_color|default": [
+      1,
+      1,
+      1
+    ]
+  },
+  "toggle_template@common.toggle": {
+    "$unchecked_locked_control|default": "Cobalt_exit_toggle.toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "Cobalt_exit_toggle.toggle_checked",
+    "$checked_locked_control|default": "Cobalt_exit_toggle.toggle_checked",
+    "$checked_locked_hover_control|default": "Cobalt_exit_toggle.toggle_checked",
+    "$unchecked_control|default": "Cobalt_exit_toggle.toggle_unchecked",
+    "$checked_control|default": "Cobalt_exit_toggle.toggle_checked",
+    "$unchecked_hover_control|default": "Cobalt_exit_toggle.toggle_unchecked_hover",
+    "$checked_hover_control|default": "Cobalt_exit_toggle.toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "toggle_content": {
+    "type": "panel",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "$custom_content|default": "Cobalt_toggles.button_text",
+    "controls": [
+      {
+        "custom_content@$custom_content": {}
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "layer": 3,
+    "$toggle_view_binding_name|default": "this_toggle",
+    "$template_toggle|default": "Cobalt_exit_toggle.toggle_template",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  }
+}

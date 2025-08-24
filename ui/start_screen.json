@@ -1,0 +1,253 @@
+{
+    "namespace": "start",
+    "start_screen_content": {
+      "modifications": [
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": [
+            {
+              "information_stack_panel@Cobalt_common.element": {
+                "$Cobalt_type": "stack_panel",
+                "orientation": "vertical",
+                "$Cobalt_anchor": "top_left",
+                "size": [
+                  "100%c",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "label1@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "logo_panel@Cobalt_common.element": {
+                            "size": [
+                              "100%c",
+                              "100%c"
+                            ],
+                            "controls": [
+                              {
+                                "logo@Cobalt_common.internal": {
+                                  "$Cobalt_internal": "logo",
+                                  "$Cobalt_anchor": "left_middle",
+                                  "offset": [
+                                    0,
+                                    0
+                                  ],
+                                  "size": [
+                                    12,
+                                    12
+                                  ]
+                                }
+                              },
+                              {
+                                "label@Cobalt_common.element": {
+                                  "$Cobalt_type": "label",
+                                  "text": "§r§bCobalt §fClient",
+                                  "font_type": "$cobalt_font",
+                                  "$Cobalt_anchor": "right_middle",
+                                  "offset": [
+                                    2,
+                                    0
+                                  ],
+                                  "size": [
+                                    "default",
+                                    10
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label2@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "label@Cobalt_common.element": {
+                            "$Cobalt_type": "label",
+                            "text": "('Verion ' + $Cobalt_version)",
+                            "font_type": "$cobalt_font",
+                            "size": [
+                              "default",
+                              10
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label3@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "label@Cobalt_common.element": {
+                            "$Cobalt_type": "label",
+                            "text": "#text",
+                            "font_type": "$cobalt_font",
+                            "size": [
+                              "default",
+                              10
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#version"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "('Minecraft Verion ' + #version)",
+                                "target_property_name": "#text"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label4@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "label@Cobalt_common.element": {
+                            "$Cobalt_type": "label",
+                            "text": "#text",
+                            "font_type": "$cobalt_font",
+                            "size": [
+                              "default",
+                              10
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#development_version"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "('Development Verion ' + #development_version)",
+                                "target_property_name": "#text"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label5@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "label@Cobalt_common.element": {
+                            "$Cobalt_type": "label",
+                            "text": "$Cobalt_mode",
+                            "font_type": "$cobalt_font",
+                            "size": [
+                              "default",
+                              10
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label6@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "label@Cobalt_common.element": {
+                            "$Cobalt_type": "label",
+                            "text": "§9discord.gg/hu6ftWcsbU",
+                            "font_type": "$cobalt_font",
+                            "size": [
+                              "default",
+                              10
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }/*,
+                  {
+                    "label7@Cobalt_common.internal": {
+                      "$Cobalt_internal": "White",
+                      "color": "$pure_color",
+                      "alpha": 0.5,
+                      "size": [
+                        "100%c + 4px",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "label@Cobalt_common.element": {
+                            "$Cobalt_type": "label",
+                            "text": "#raw",
+                            "font_type": "$cobalt_font",
+                            "size": [
+                              "default",
+                              10
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#profile_image_options"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "('rawJSON: '+'§7'+#profile_image_options)",
+                                "target_property_name": "#raw"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }*/
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }

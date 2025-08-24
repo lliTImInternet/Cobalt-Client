@@ -1,0 +1,28 @@
+{
+    "namespace": "Cobalt_design",
+    "content": {
+        "$Cobalt_version": "1.0",
+        "$Cobalt_mode": "Dark Mode",
+        "$cobalt_font": "smooth",
+        "$main_color": [
+            0.172,
+            0.156,
+            0.156
+        ],
+        "$second_color": [
+            0.211,
+            0.192,
+            0.192
+        ],
+        "$pure_color": [
+            0,
+            0,
+            0
+        ],
+        "$reverse_color": [
+            1,
+            1,
+            1
+        ]
+    }
+}

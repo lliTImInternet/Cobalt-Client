@@ -1,0 +1,37 @@
+{
+    "namespace": "Cobalt_fullbright",
+
+    //Huge thanks to @t1m0thy_yt for helping me with this one
+    //I didnt include this file in modules_list.json to avoid the gradient being hidden on F1
+
+    "content@Cobalt_fullbright.template": {
+        "bindings": [
+            {
+            "binding_type": "view",
+            "source_control_name": "Cobalt_pack_fullbright_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "template": {
+        "type": "custom",
+        "renderer": "gradient_renderer",
+        "color1": "$color1",
+        "color2": "$color2",
+        "layer": -1,
+        "$color1|default": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "$color2|default": [
+            1,
+            1,
+            1,
+            1
+        ]
+    }
+}

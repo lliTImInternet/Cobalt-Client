@@ -1,0 +1,14 @@
+{
+    "namespace": "Cobalt_armor_hud_settings",
+    "content@Cobalt_modules_menu_settings_pages.template": {
+        "$Cobalt_settings_page_toggle_name": "Cobalt_armor_hud_settings",
+        "$Cobalt_settings_page_header": "Armor HUD Settings",
+        "$Cobalt_settings_page_info": "The Armor HUD Mod shows you the armour you are currently wearing on your screen.\nNote: This mod does not display the durability of your armour.",
+        "$Cobalt_settings_page_image": "armor_hud",
+        "$Cobalt_settings_pages_toggles_controls": [
+            {
+                "1@Cobalt_modules_menu_settings_pages.no_settings": {}
+            }
+        ]
+    }
+}

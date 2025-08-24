@@ -1,0 +1,322 @@
+{
+  "namespace": "Cobalt_modules_menu_base",
+  "Cobalt_modules_menu_button@Cobalt_toggle.content": {
+    "$button_text": "",
+    "$toggle_view_binding_name": "Cobalt_modules_menu_toggle",
+    "$toggle_group_forced_index": 2,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$default_alpha": 0,
+    "$hover_alpha": 0,
+    "$pressed_alpha": 0,
+    "$pressed_hover_alpha": 0,
+    "offset": [
+      2,
+      2
+    ],
+    "size": [
+      20,
+      20
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Cobalt_modules_menu_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "Cobalt_modules_menu@config.1": {
+    "type": "panel",
+    "controls": [
+      {
+        "@Cobalt_modules_menu_base.modules_menu": {}
+      }
+    ]
+  },
+  "modules_menu@Cobalt_common.internal": {
+    "$Cobalt_internal": "rounded_bg",
+    "layer": 100,
+    "color": "$main_color",
+    "size": [
+      "60%",
+      "80%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Cobalt_modules_menu_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "header@Cobalt_common.internal": {
+          "$Cobalt_internal": "mod_menu/header",
+          "$Cobalt_anchor": "top_middle",
+          "layer": 101,
+          "color": "$second_color",
+          "size": [
+            "100%",
+            25
+          ],
+          "controls": [
+            {
+              "logo@Cobalt_common.internal": {
+                "$Cobalt_internal": "logo",
+                "$Cobalt_anchor": "left_middle",
+                "layer": 102,
+                "offset": [
+                  5,
+                  0
+                ],
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "pages_buttons@Cobalt_common.element": {
+                "$Cobalt_type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  25
+                ],
+                "controls": [
+                  {
+                    "modules@Cobalt_toggle.Cobalt_tab_toggle": {
+                      "$button_icon": ".Cobalt/textures/icons/book",
+                      "$custom_content": "Cobalt_button.button_icon",
+                      "$button_hover_texture": ".Cobalt/textures/White",
+                      "$button_pressed_texture": ".Cobalt/textures/White",
+                      "$button_pressed_hover_texture": ".Cobalt/textures/White",
+                      "$toggle_view_binding_name": "Cobalt_modules_menu_modules_page_toggle",
+                      "$toggle_group_forced_index": 0,
+                      "$default_alpha": 0,
+                      "$hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$pressed_alpha": 0.3,
+                      "$pressed_hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$hover_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "$pressed_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "size": [
+                        25,
+                        25
+                      ]
+                    }
+                  },
+                  {
+                    "elements@Cobalt_toggle.Cobalt_tab_toggle": {
+                      "$button_icon": ".Cobalt/textures/icons/screen",
+                      "$custom_content": "Cobalt_button.button_icon",
+                      "$button_hover_texture": ".Cobalt/textures/White",
+                      "$button_pressed_texture": ".Cobalt/textures/White",
+                      "$button_pressed_hover_texture": ".Cobalt/textures/White",
+                      "$toggle_view_binding_name": "Cobalt_modules_menu_screen_page_toggle",
+                      "$toggle_group_forced_index": 1,
+                      "$default_alpha": 0,
+                      "$hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$pressed_alpha": 0.3,
+                      "$pressed_hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$hover_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "$pressed_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "size": [
+                        25,
+                        25
+                      ]
+                    }
+                  },
+                  {
+                    "plus@Cobalt_toggle.Cobalt_tab_toggle": {
+                      "$button_icon": ".Cobalt/textures/icons/book",
+                      "$custom_content": "Cobalt_button.button_icon",
+                      "$button_hover_texture": ".Cobalt/textures/White",
+                      "$button_pressed_texture": ".Cobalt/textures/White",
+                      "$button_pressed_hover_texture": ".Cobalt/textures/White",
+                      "$toggle_view_binding_name": "Cobalt_modules_menu_plus_page_toggle",
+                      "$toggle_group_forced_index": 2,
+                      "$default_alpha": 0,
+                      "$hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$pressed_alpha": 0.3,
+                      "$pressed_hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$hover_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "$pressed_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "size": [
+                        25,
+                        25
+                      ]
+                    }
+                  },
+                  {
+                    "info@Cobalt_toggle.Cobalt_tab_toggle": {
+                      "$button_icon": ".Cobalt/textures/icons/info",
+                      "$custom_content": "Cobalt_button.button_icon",
+                      "$button_hover_texture": ".Cobalt/textures/White",
+                      "$button_pressed_texture": ".Cobalt/textures/White",
+                      "$button_pressed_hover_texture": ".Cobalt/textures/White",
+                      "$toggle_view_binding_name": "Cobalt_modules_menu_info_page_toggle",
+                      "$toggle_group_forced_index": 3,
+                      "$default_alpha": 0,
+                      "$hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$pressed_alpha": 0.3,
+                      "$pressed_hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$hover_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "$pressed_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "size": [
+                        25,
+                        25
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Cobalt_return_to_game@Cobalt_exit_toggle.content": {
+                "$button_text": "",
+                "$tab_view_binding_name": "Cobalt_modules_menu_toggle",
+                "$toggle_group_forced_index": 130,
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$default_alpha": 0,
+                "$hover_alpha": 0,
+                "$pressed_alpha": 0,
+                "$pressed_hover_alpha": 0,
+                "layer": 102,
+                "offset": [
+                  -7,
+                  0
+                ],
+                "size": [
+                  25,
+                  25
+                ],
+                "$button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "ignored": "$game_pad",
+                    "mapping_type": "pressed",
+                    "to_button_id": "button.menu_ok"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "ignored": "$game_pad",
+                    "mapping_type": "pressed",
+                    "to_button_id": "button.menu_ok"
+                  },
+                  {
+                    "from_button_id": "button.menu_cancel",
+                    "mapping_type": "global",
+                    "to_button_id": "button.menu_ok"
+                  },
+                  {
+                    "from_button_id": "button.menu_exit",
+                    "mapping_type": "global",
+                    "to_button_id": "button.menu_ok"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "main_screen_content@Cobalt_common.element": {
+          "$Cobalt_anchor": "bottom_middle",
+          "size": [
+            "100%",
+            "100% - 25px"
+          ],
+          "controls": [
+            {
+              "modules@Cobalt_modules_menu_modules_page.content": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_modules_menu_modules_page_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "screen@Cobalt_modules_menu_screen_page.content": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_modules_menu_screen_page_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "plus@Cobalt_modules_menu_plus.content": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_modules_menu_plus_page_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "info@Cobalt_modules_menu_info_page.content": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_modules_menu_info_page_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "settings_pages@Cobalt_modules_menu_settings_pages.content": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

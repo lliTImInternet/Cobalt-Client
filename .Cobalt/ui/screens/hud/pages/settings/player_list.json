@@ -1,0 +1,135 @@
+{
+    "namespace": "Cobalt_player_list_settings",
+    "content@Cobalt_modules_menu_settings_pages.template": {
+      "$Cobalt_settings_page_toggle_name": "Cobalt_player_list_settings",
+      "$Cobalt_settings_page_header": "Player List Settings",
+      "$Cobalt_settings_page_info": "The player list shows you the list of players currently on the server or world. You can activate it on PC by holding down the Tab key, or on mobile by tapping the P button.",
+      "$Cobalt_settings_page_image": "player_list",
+      "$Cobalt_settings_pages_toggles_controls": [
+        {
+            "gamer_icon_toggle@Cobalt_modules_menu_settings_pages.template_toggle": {
+                "$Cobalt_settings_toggle_name": "Cobalt_player_list_gamer_icon_toggle",
+                "$toggle_tags": "$gamer_icon",
+                "$Cobalt_settings_toggle_text": "Gamer Icon",
+                "$Cobalt_anchor": "top_middle",
+                "offset": [
+                  "30%",
+                  0
+                ]
+            }
+        },
+        {
+          "opacity_slider": {
+            "type": "stack_panel",
+            "orientation": "vertical",
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "offset": [
+                0,
+                25
+            ],
+            "size": [
+              "90%",
+              "100%c"
+            ],
+            "controls": [
+              {
+                "1@Cobalt_common.spacer": {}
+              },
+              {
+                "2@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.0",
+                  "$slider_value": 0
+                }
+              },
+              {
+                "3@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.1",
+                  "$slider_value": 1
+                }
+              },
+              {
+                "4@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.2",
+                  "$slider_value": 2
+                }
+              },
+              {
+                "5@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.3",
+                  "$slider_value": 3
+                }
+              },
+              {
+                "6@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.4",
+                  "$slider_value": 4
+                }
+              },
+              {
+                "7@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.5",
+                  "$slider_value": 5
+                }
+              },
+              {
+                "8@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.6",
+                  "$slider_value": 6
+                }
+              },
+              {
+                "9@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.7",
+                  "$slider_value": 7
+                }
+              },
+              {
+                "10@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.8",
+                  "$slider_value": 8
+                }
+              },
+              {
+                "11@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r0.9",
+                  "$slider_value": 9
+                }
+              },
+              {
+                "12@Cobalt_slider.Cobalt_slider_text": {
+                  "$slider_name_controls": "player_list_opacity",
+                  "$Cobalt_slider_text": "Background Opacity: §r1.0",
+                  "$slider_value": 10
+                }
+              },
+              {
+                "13@Cobalt_common.spacer": {}
+              },
+              {
+                "14@Cobalt_slider.Cobalt_slider_panel": {
+                  "size": [
+                    "100%",
+                    18
+                  ],
+                  "$Cobalt_slider_steps": 11,
+                  "$Cobalt_slider_toggle_tags": "$player_list_opacity",
+                  "$Cobalt_slider_binding_controls_name": "player_list_opacity"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

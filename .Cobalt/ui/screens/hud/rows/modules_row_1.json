@@ -1,0 +1,81 @@
+{
+    "namespace": "Cobalt_modules_row_1",
+    "content@Cobalt_common.element": {
+        "$Cobalt_type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            80
+        ],
+        "controls": [
+            {
+                "spacer1@Cobalt_common.element": {
+                    "size":[
+                        10,
+                        10
+                    ]
+                }
+            },
+            {
+                "pack_display@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/box",
+                    "$Cobalt_modules_menu_button_template_button_name": "Cobalt_pack_display_toggle",
+                    "$Cobalt_modules_menu_button_template_settings_name": "Cobalt_pack_display_settings",
+                    "$Cobalt_modules_menu_button_template_settings_index": 4,
+                    "$toggle_tags": "$pack_display"
+                }
+            },
+            {
+                "spacer2@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "armor_hud@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/trello",
+                    "$Cobalt_modules_menu_button_template_button_name": "Cobalt_armor_hud_toggle",
+                    "$Cobalt_modules_menu_button_template_settings_name": "Cobalt_armor_hud_settings",
+                    "$Cobalt_modules_menu_button_template_settings_index": 5,
+                    "$toggle_tags": "$armor_hud"
+                }
+            },
+            {
+                "spacer3@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "direction_hud@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/compass",
+                    "$Cobalt_modules_menu_button_template_button_name": "Cobalt_directionhud_toggle",
+                    "$Cobalt_modules_menu_button_template_settings_name": "Cobalt_directionhud_settings",
+                    "$Cobalt_modules_menu_button_template_settings_index": 6,
+                    "$toggle_tags": "$direction_hud"
+                }
+            },
+            {
+                "spacer4@Cobalt_common.element": {
+                    "size":[
+                        5,
+                        5
+                    ]
+                }
+            },
+            {
+                "player_list@Cobalt_modules_menu_button_template.content": {
+                    "$Cobalt_modules_menu_button_template_icon": ".Cobalt/textures/icons/users",
+                    "$Cobalt_modules_menu_button_template_button_name": "Cobalt_player_list_toggle",
+                    "$Cobalt_modules_menu_button_template_settings_name": "Cobalt_player_list_settings",
+                    "$Cobalt_modules_menu_button_template_settings_index": 7,
+                    "$toggle_tags": "$palyer_list"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "namespace": "Cobalt_modules_list",
+    "content@Cobalt_common.element": {
+      "bindings": [
+        {
+          "binding_name": "#hud_visible",
+          "binding_name_override": "#visible",
+          "binding_type": "global"
+        }
+      ],
+      "controls": [
+        {
+          "1@Cobalt_pack_display.content": {}
+        },
+        {
+          "2@Cobalt_armor_hud.content": {}
+        },
+        {
+          "3@Cobalt_directionhud.content": {}
+        },
+        {
+          "4@Cobalt_player_list.content": {}
+        },
+        {
+          "6@Cobalt_bow_indicator.content": {}
+        }
+      ]
+    }
+  }

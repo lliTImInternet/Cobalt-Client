@@ -1,0 +1,30 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.pepe_directionhud": {
+            "geometry": "Geometry.pepe_directionhud",
+            "materials": [
+                {
+                    "*": "Material.pepe_directionhud"
+                }
+            ],
+            "textures": [
+                "Texture.pepe_directionhud"
+            ],
+            "ignore_lighting": true,
+            "light_color_multiplier": 1.3,
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "uv_anim": {
+                "offset": [
+                    "0.002777777777777 * (90 + query.camera_rotation(1))",
+                    0
+                ],
+                "scale": [
+                    1,
+                    1
+                ]
+            }
+        }
+    }
+}

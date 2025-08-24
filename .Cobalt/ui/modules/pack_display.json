@@ -1,0 +1,41 @@
+{
+    "namespace": "Cobalt_pack_display",
+    "content@Cobalt_common.internal": {
+      "$Cobalt_internal": "rounded_bg",
+      "color": "$pure_color",
+      "$Cobalt_anchor": "top_right",
+      "alpha": 0.5,
+      "layer": 21,
+      "size": [
+        35,
+        35
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "pack_display_opacity",
+          "source_property_name": "(#slider_value / 10)",
+          "target_property_name": "#alpha"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "Cobalt_pack_display_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        {
+          "icon@Cobalt_common.element": {
+            "$Cobalt_type": "image",
+            "$Cobalt_anchor": "center",
+            "texture": "pack_icon",
+            "size": [
+              30,
+              30
+            ]
+          }
+        }
+      ]
+    }
+  }

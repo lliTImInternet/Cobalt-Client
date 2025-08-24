@@ -1,0 +1,14 @@
+{
+    "namespace": "Cobalt_bow_indicator_settings",
+    "content@Cobalt_modules_menu_settings_pages.template": {
+        "$Cobalt_settings_page_toggle_name": "Cobalt_bow_indicator_settings",
+        "$Cobalt_settings_page_header": "Bow Indicator Settings",
+        "$Cobalt_settings_page_info": "The bow indicator shows you the status of your bow on-screen and the maximum damage you can deal with your bow.",
+        "$Cobalt_settings_page_image": "bow_indicator",
+        "$Cobalt_settings_pages_toggles_controls": [
+            {
+                "1@Cobalt_modules_menu_settings_pages.no_settings": {}
+            }
+        ]
+    }
+}

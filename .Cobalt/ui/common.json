@@ -1,0 +1,32 @@
+{
+    "namespace": "Cobalt_common",
+    "spacer@Cobalt_common.element": {
+      "size": [
+        2,
+        2
+      ]
+    },
+    "hover_text_template": {
+      "type": "custom",
+      "renderer": "hover_text_renderer",
+      "allow_clipping": false,
+      "ignored": "(not $hover)",
+      "layer": 50,
+      "$Cobalt_hover_text|default": "§cInvalid Cobalt Hover Text",
+      "property_bag": {
+        "#hover_text": "$Cobalt_hover_text"
+      }
+    },
+    "internal@Cobalt_common.element": {
+      "$Cobalt_type": "image",
+      "texture": "('.Cobalt/textures/' + $Cobalt_internal)",
+      "$Cobalt_internal": "White"
+    },
+    "element@Cobalt_design.content": {
+      "type": "$Cobalt_type",
+      "$Cobalt_type|default": "panel",
+      "anchor_from": "$Cobalt_anchor",
+      "anchor_to": "$Cobalt_anchor",
+      "$Cobalt_anchor|default": "center"
+    }
+  }

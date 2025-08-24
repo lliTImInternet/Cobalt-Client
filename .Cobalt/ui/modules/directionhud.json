@@ -1,0 +1,63 @@
+{
+    "namespace": "Cobalt_directionhud",
+    "content@Cobalt_common.internal": {
+      "$Cobalt_internal": "rounded_bg",
+      "$Cobalt_anchor": "top_middle",
+      "color": "$pure_color",
+      "offset": "$offset",
+      "alpha": 0.5,
+      "layer": 21,
+      "size": [
+        138,
+        18
+      ],
+      "controls": [
+        {
+          "mod@Cobalt_common.element": {
+            "$Cobalt_type": "custom",
+            "renderer": "paper_doll_renderer",
+            "$Cobalt_anchor": "top_middle",
+            "layer": 1,
+            "size": [
+              39,
+              39
+            ],
+            "offset": [
+              35.2,
+              2784.5
+            ]
+          }
+        }
+      ],
+      "variables": [
+        {
+          "requires": "($mouse or $gamepad)",
+          "$offset": [
+            0,
+            4
+          ]
+        },
+        {
+          "requires": "$touch",
+          "$offset": [
+            0,
+            20
+          ]
+        }
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "directionhud_opacity",
+          "source_property_name": "(#slider_value / 10)",
+          "target_property_name": "#alpha"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "Cobalt_directionhud_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ]
+    }
+  }

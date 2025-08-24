@@ -1,0 +1,196 @@
+{
+  "namespace": "Cobalt_modules_menu_settings_pages",
+  "content@Cobalt_common.element": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "1@Cobalt_armor_hud_settings.content": {}
+      },
+      {
+        "2@Cobalt_pack_display_settings.content": {}
+      },
+      {
+        "3@Cobalt_directionhud_settings.content": {}
+      },
+      {
+        "4@Cobalt_player_list_settings.content": {}
+      },
+      {
+        "5@Cobalt_fullbright_settings.content": {}
+      },
+      {
+        "6@Cobalt_bow_indicator_settings.content": {}
+      }
+    ]
+  },
+  "template_toggle@Cobalt_common.element": {
+    "$Cobalt_type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 10,
+    "size": [
+      "100%c",
+      25
+    ],
+    "controls": [
+      {
+        "toggle@Cobalt_toggle.content": {
+          "$button_text": "",
+          "$toggle_view_binding_name": "$Cobalt_settings_toggle_name",
+          "$button_default_texture": ".Cobalt/textures/buttons/toggle_off",
+          "$button_hover_texture": ".Cobalt/textures/buttons/toggle_off_hover",
+          "$button_pressed_texture": ".Cobalt/textures/buttons/toggle_on",
+          "$button_pressed_hover_texture": ".Cobalt/textures/buttons/toggle_on_hover",
+          "$toggle_name": "Cobalt_modules_toggle",
+          "$toggle_tab_focus_binding_name": "#Cobalt_modules_focus_precedence",
+          "$toggle_tab_focus_binding_type": "global",
+          "$toggle_on_hover_binding_type": "global",
+          "$toggle_on_hover_binding_name": "#toggle_on_hover",
+          "$default_color": [
+            1,
+            1,
+            1
+          ],
+          "size": [
+            25,
+            25
+          ]
+        }
+      },
+      {
+        "spacer@Cobalt_common.spacer": {}
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "text@Cobalt_common.element": {
+                "$Cobalt_type": "label",
+                "text": "$Cobalt_settings_toggle_text",
+                "$Cobalt_settings_toggle_text|default": "§cMissing Text",
+                "font_type": "$cobalt_font",
+                "size": [
+                  "default",
+                  15
+                ],
+                "offset": [
+                  0,
+                  "12.5%"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "template@Cobalt_common.element": {
+    "$Cobalt_anchor": "top_middle",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$Cobalt_settings_page_toggle_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "header@Cobalt_common.element": {
+          "$Cobalt_type": "label",
+          "text": "$Cobalt_settings_page_header",
+          "$Cobalt_settings_page_header|default": "§cMissing Header",
+          "font_type": "$cobalt_font",
+          "$Cobalt_anchor": "top_middle",
+          "font_scale_factor": 2,
+          "size": [
+            "default",
+            20
+          ]
+        }
+      },
+      {
+        "info_text@Cobalt_common.element": {
+          "$Cobalt_type": "label",
+          "text": "$Cobalt_settings_page_info",
+          "$Cobalt_settings_page_info|default": "§cMissing Information Text",
+          "font_type": "$cobalt_font",
+          "text_alignment": "left",
+          "$Cobalt_anchor": "top_middle",
+          "offset": [
+            "-20%",
+            25
+          ],
+          "size": [
+            "50%",
+            "default"
+          ]
+        }
+      },
+      {
+        "info_image@Cobalt_common.element": {
+          "$Cobalt_type": "image",
+          "texture": "('.Cobalt/textures/mod_menu/settings_pages/' + $Cobalt_settings_page_image)",
+          "$Cobalt_anchor": "top_middle",
+          "layer": 2,
+          "offset": [
+            "30%",
+            22
+          ],
+          "size": [
+            "25%",
+            100
+          ]
+        }
+      },
+      {
+        "info_image_shadow@Cobalt_common.element": {
+          "$Cobalt_type": "image",
+          "texture": "('.Cobalt/textures/mod_menu/settings_pages/' + $Cobalt_settings_page_image)",
+          "$Cobalt_anchor": "top_middle",
+          "layer": 1,
+          "alpha": 0.5,
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "offset": [
+            "30.5%",
+            24
+          ],
+          "size": [
+            "25%",
+            100
+          ]
+        }
+      },
+      {
+        "settings@Cobalt_common.element": {
+          "offset": [
+            0,
+            125
+          ],
+          "controls": "$Cobalt_settings_pages_toggles_controls"
+        }
+      }
+    ]
+  },
+  "no_settings@Cobalt_common.element": {
+    "$Cobalt_type": "label",
+    "text": "§cThere are no settings available :(",
+    "font_type": "$cobalt_font",
+    "$Cobalt_anchor": "top_middle",
+    "size": [
+      "default",
+      10
+    ]
+  }
+}

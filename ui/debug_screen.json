@@ -1,0 +1,105 @@
+{
+    "namespace": "debug_screen",
+    "content_panel": {
+      "modifications": [
+        {
+          "array_name": "controls",
+          "operation": "insert_front",
+          "value": [
+            {
+              "popup@Cobalt_common.internal": {
+                "$Cobalt_internal": "rounded_bg",
+                "$Cobalt_anchor": "top_middle",
+                "layer": 1,
+                "alpha": 0.7,
+                "color": "$pure_color",
+                "offset": [
+                  0,
+                  -50
+                ],
+                "size": [
+                  180,
+                  35
+                ],
+                "anims": [
+                  "1@debug_screen.Cobalt_popup_animation_1"
+                ],
+                "controls": [
+                  {
+                    "logo@Cobalt_common.internal": {
+                      "$Cobalt_internal": "logo",
+                      "$Cobalt_anchor": "right_middle",
+                      "layer": 2,
+                      "offset": [
+                        -5,
+                        0
+                      ],
+                      "size": [
+                        30,
+                        30
+                      ]
+                    }
+                  },
+                  {
+                    "label@Cobalt_common.element": {
+                      "$Cobalt_type": "label",
+                      "text": "Loaded §bCobalt §fClient\n§rReady to play",
+                      "font_type": "$cobalt_font",
+                      "text_alignment": "left",
+                      "$Cobalt_anchor": "left_middle",
+                      "layer": 2,
+                      "offset": [
+                        4,
+                        0
+                      ],
+                      "max_size": [
+                        126,
+                        "100%"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "Cobalt_popup_animation_1": {
+      "anim_type": "wait",
+      "duration": 1,
+      "next": "@debug_screen.Cobalt_popup_animation_2"
+    },
+    "Cobalt_popup_animation_2": {
+      "anim_type": "offset",
+      "easing": "out_cubic",
+      "duration": 1,
+      "from": [
+        0,
+        0
+      ],
+      "to": [
+        0,
+        20
+      ],
+      "next": "@debug_screen.Cobalt_popup_animation_3"
+    },
+    "Cobalt_popup_animation_3": {
+      "anim_type": "wait",
+      "duration": 3,
+      "next": "@debug_screen.Cobalt_popup_animation_4"
+    },
+    "Cobalt_popup_animation_4": {
+      "anim_type": "offset",
+      "easing": "out_cubic",
+      "duration": 1,
+      "from": [
+        0,
+        20
+      ],
+      "to": [
+        0,
+        -50
+      ]
+    }
+  }

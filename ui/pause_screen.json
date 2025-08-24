@@ -1,0 +1,158 @@
+{
+  "namespace": "pause",
+  "pause_screen": {
+    "$screen_content": "pause.Cobalt_pause_screen_content",
+    "cache_screen": true,
+    "$use_loading_bars": false,
+    "close_on_player_hurt": false,
+    "absorbs_input": false,
+    "variables": []
+  },
+  "pause_screen_content": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Cobalt_modules_menu_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "1@pause.Cobalt_modules_menu_button": {}
+          }
+        ]
+      }
+    ]
+  },
+  "Cobalt_pause_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@pause.pause_screen_content": {}
+      },
+      {
+        "2@pause.Cobalt_return_to_game": {}
+      }
+    ]
+  },
+  "Cobalt_modules_menu_button@Cobalt_toggle.content": {
+    "$button_icon": ".Cobalt/textures/icons/book",
+    "$Cobalt_hover_text": "Open Mod Menu",
+    "$toggle_view_binding_name": "Cobalt_modules_menu_toggle",
+    "$custom_content": "Cobalt_toggle.label_hover_text",
+    "$custom_content_hover_text": "Cobalt_button.button_icon",
+    "$focus_id": "mod_open",
+    "$focus_override_up": "resume_game",
+    "$toggle_group_forced_index": 2,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$pressed_color": [
+      0,
+      0,
+      0
+    ],
+    "$icon_color": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      2,
+      2
+    ],
+    "size": [
+      20,
+      20
+    ]
+  },
+  "Cobalt_return_to_game@Cobalt_common.element": {
+    "size": [
+      "60%",
+      "80%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Cobalt_modules_menu_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "header@Cobalt_common.element": {
+          "$Cobalt_anchor": "top_middle",
+          "size": [
+            "100%",
+            25
+          ],
+          "controls": [
+            {
+              "button@Cobalt_exit_toggle.content": {
+                "$button_icon": ".Cobalt/textures/icons/arrow",
+                "$custom_content": "Cobalt_button.button_icon",
+                "$tab_view_binding_name": "Cobalt_modules_menu_toggle",
+                "$button_hover_texture": ".Cobalt/textures/White",
+                "$button_pressed_hover_texture": ".Cobalt/textures/White",
+                "$toggle_group_forced_index": 131,
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$default_alpha": 0,
+                "$hover_alpha": 0.3,
+                "$pressed_alpha": 0,
+                "$pressed_hover_alpha": 0.3,
+                "$hover_color": [
+                  0,
+                  1,
+                  1
+                ],
+                "$pressed_hover_color": [
+                  0,
+                  1,
+                  1
+                ],
+                "size": [
+                  25,
+                  25
+                ],
+                "offset": [
+                  -7,
+                  0
+                ],
+                "$button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "ignored": "$game_pad",
+                    "mapping_type": "pressed",
+                    "to_button_id": "button.menu_ok"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "ignored": "$game_pad",
+                    "mapping_type": "pressed",
+                    "to_button_id": "button.menu_ok"
+                  },
+                  {
+                    "from_button_id": "button.menu_cancel",
+                    "mapping_type": "global",
+                    "to_button_id": "button.menu_ok"
+                  },
+                  {
+                    "from_button_id": "button.menu_exit",
+                    "mapping_type": "global",
+                    "to_button_id": "button.menu_ok"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
