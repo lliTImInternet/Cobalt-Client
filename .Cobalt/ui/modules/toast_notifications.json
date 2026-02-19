@@ -1,0 +1,28 @@
+{
+  "namespace": "Cobalt_toast_notifications",
+  "content@Cobalt_common.element": {
+    "$Cobalt_type": "stack_panel",
+    "orientation": "vertical",
+    "$Cobalt_anchor": "top_right",
+    "size": [
+      180,
+      "100%c + 2px"
+    ],
+    "controls": [
+      {
+        "pack_display_toast@Cobalt_modules_menu_toast.toast_trigger": {
+          "$Cobalt_toggle_source": "Cobalt_pack_display_toggle",
+          "$Cobalt_module_icon": "box",
+          "$Cobalt_module_name": "Pack Display"
+        }
+      },
+      {
+        "armor_hud_toast@Cobalt_modules_menu_toast.toast_trigger": {
+          "$Cobalt_toggle_source": "Cobalt_armor_hud_toggle",
+          "$Cobalt_module_icon": "trello",
+          "$Cobalt_module_name": "Armor HUD"
+        }
+      }
+    ]
+  }
+}

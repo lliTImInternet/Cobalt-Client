@@ -1,0 +1,174 @@
+{
+  "namespace": "Cobalt_modules_menu_toast",
+  "popup_on@Cobalt_modules_menu_toast.popup": {
+    "$Cobalt_popup_text": "('Enabled ' + $Cobalt_module_name)"
+  },
+  "popup_off@Cobalt_modules_menu_toast.popup": {
+    "$Cobalt_popup_text": "('Disabled ' + $Cobalt_module_name)"
+  },
+  "popup@Cobalt_common.internal": {
+    "$Cobalt_internal": "rounded_bg",
+    "$Cobalt_anchor": "top_right",
+    "layer": 1,
+    "alpha": 0.7,
+    "color": "$pure_color",
+    "offset": [
+      0,
+      -50
+    ],
+    "size": [
+      180,
+      35
+    ],
+    "anims": [
+      "@Cobalt_modules_menu_toast.Cobalt_popup_animation_1"
+    ],
+    "controls": [
+      {
+        "logo@Cobalt_common.internal": {
+          "$Cobalt_internal": "('icons/' + $Cobalt_module_icon)",
+          "$Cobalt_anchor": "right_middle",
+          "layer": 2,
+          "offset": [
+            -5,
+            0
+          ],
+          "size": [
+            30,
+            30
+          ]
+        }
+      },
+      {
+        "label@Cobalt_common.element": {
+          "$Cobalt_type": "label",
+          "text": "$Cobalt_popup_text",
+          "font_type": "$cobalt_font",
+          "text_alignment": "left",
+          "$Cobalt_anchor": "left_middle",
+          "font_scale_factor": 1,
+          "layer": 2,
+          "offset": [
+            4,
+            0
+          ],
+          "max_size": [
+            126,
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "Cobalt_popup_animation_1": {
+    "anim_type": "offset",
+    "easing": "out_quart",
+    "duration": 0.5,
+    "from": [
+      0,
+      -50
+    ],
+    "to": [
+      0,
+      10
+    ],
+    "next": "@Cobalt_modules_menu_toast.Cobalt_popup_animation_2"
+  },
+  "Cobalt_popup_animation_2": {
+    "anim_type": "wait",
+    "duration": 2.0,
+    "next": "@Cobalt_modules_menu_toast.Cobalt_popup_animation_3"
+  },
+  "Cobalt_popup_animation_3": {
+    "anim_type": "offset",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": [
+      0,
+      10
+    ],
+    "to": [
+      0,
+      -50
+    ],
+    "destroy_at_end": "$Cobalt_destroy_at_end",
+    "end_event": "toast_end"
+  },
+  "toast_trigger": {
+    "type": "panel",
+    "$Cobalt_show_on_toggle": "Cobalt_modules_menu_toast.popup_on",
+    "$Cobalt_show_off_toggle": "Cobalt_modules_menu_toast.popup_off",
+    "controls": [
+      {
+        "true_toast": {
+          "type": "collection_panel",
+          "$Cobalt_destroy_at_end": "$Cobalt_show_on_toggle",
+          "factory": {
+            "name": "Cobalt_toast_factory_on",
+            "control_name": "$Cobalt_show_on_toggle",
+            "max_children_size": 1
+          },
+          "bindings": [
+            {
+              "binding_type": "global",
+              "ignored": true,
+              "binding_name": "#no_data_bound",
+              "binding_name_override": "#toggle_state"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "$Cobalt_toggle_source",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#toggle_state"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(1 * #toggle_state)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(1 * #toggle_state)",
+              "target_property_name": "#collection_length"
+            }
+          ]
+        }
+      },
+      {
+        "false_toast": {
+          "type": "collection_panel",
+          "$Cobalt_destroy_at_end": "$Cobalt_show_off_toggle",
+          "factory": {
+            "name": "Cobalt_toast_factory_off",
+            "control_name": "$Cobalt_show_off_toggle",
+            "max_children_size": 1
+          },    
+          "bindings": [
+            {
+              "binding_type": "global",
+              "ignored": true,
+              "binding_name": "#no_data_bound",
+              "binding_name_override": "#toggle_state"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "$Cobalt_toggle_source",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#toggle_state"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(1 * (not #toggle_state))",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(1 * (not #toggle_state))",
+              "target_property_name": "#collection_length"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
