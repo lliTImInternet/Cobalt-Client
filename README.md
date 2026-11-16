@@ -19,4 +19,4 @@ A new category (hats, wings, ...) is another entry in `categories` with its own 
 
 ### Credits
 
-MINECON cape textures come from the Custom Capes pack made by Xatalyst, capes provided by BionicBens.
+The MINECON cape textures are by Mojang.
