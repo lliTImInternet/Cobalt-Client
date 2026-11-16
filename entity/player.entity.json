@@ -49,7 +49,13 @@
         "pepe_directionhud": ".Cobalt/textures/modules/directionhud",
         "bow_0": ".Cobalt/textures/modules/bow_0",
         "bow_1": ".Cobalt/textures/modules/bow_1",
-        "bow_2": ".Cobalt/textures/modules/bow_2"
+        "bow_2": ".Cobalt/textures/modules/bow_2",
+        "cosmetic_cape_minecon_2011": ".Cobalt/textures/cosmetics/capes/minecon_2011",
+        "cosmetic_cape_minecon_2012": ".Cobalt/textures/cosmetics/capes/minecon_2012",
+        "cosmetic_cape_minecon_2013": ".Cobalt/textures/cosmetics/capes/minecon_2013",
+        "cosmetic_cape_minecon_2015": ".Cobalt/textures/cosmetics/capes/minecon_2015",
+        "cosmetic_cape_minecon_2016": ".Cobalt/textures/cosmetics/capes/minecon_2016",
+        "cosmetic_cape_minecon_2019": ".Cobalt/textures/cosmetics/capes/minecon_2019"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
@@ -59,7 +65,8 @@
         "leggings": "geometry.leggings",
         "boots": "geometry.boots",
         "pepe_directionhud": "geometry.pepe_directionhud",
-        "bow": "geometry.bow_indicator"
+        "bow": "geometry.bow_indicator",
+        "cosmetic_cape": "geometry.cape"
       },
       "scripts": {
         "scale": "0.9375",
@@ -67,7 +74,13 @@
           "variable.is_holding_right = 0.0;",
           "variable.is_blinking = 0.0;",
           "variable.last_blink_time = 0.0;",
-          "variable.hand_bob = 0.0;"
+          "variable.hand_bob = 0.0;",
+          "variable.cosmetic_take = 0.0;",
+          "variable.cosmetic_prev = 0.0;",
+          "variable.cosmetic_stable = 0.0;",
+          "variable.cosmetic_time = -100.0;",
+          "variable.cosmetic_total = 0.0;",
+          "variable.cosmetic_cape = 0.0;"
         ],
         "pre_animation": [
           "variable.helmet_layer_visible = !query.has_head_gear;",
@@ -79,7 +92,15 @@
           "variable.first_person_rotation_factor = math.sin((1 - variable.attack_time) * 180.0);",
           "variable.hand_bob = query.life_time < 0.01 ? 0.0 : variable.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - variable.hand_bob) * 0.02;",
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
-          "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;"
+          "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
+          "temp.cosmetic_count = (temp.cosmetic_count ?? 0.0) + ((variable.is_paperdoll && (variable.should_look_at_target_ui ?? 1.0) < 0.5) ? 1.0 : 0.0);",
+          "variable.cosmetic_take = (variable.is_paperdoll || query.is_in_ui) ? 0.0 : (query.is_local_player ? (temp.cosmetic_count ?? 0.0) : 0.0);",
+          "temp.cosmetic_count = variable.cosmetic_take > 0.0 ? 0.0 : (temp.cosmetic_count ?? 0.0);",
+          "variable.cosmetic_stable = (variable.cosmetic_take > 0.0 && variable.cosmetic_take == variable.cosmetic_prev) ? variable.cosmetic_take : variable.cosmetic_stable;",
+          "variable.cosmetic_prev = variable.cosmetic_take > 0.0 ? variable.cosmetic_take : variable.cosmetic_prev;",
+          "variable.cosmetic_time = variable.cosmetic_take > 0.0 ? query.life_time : variable.cosmetic_time;",
+          "variable.cosmetic_total = (query.life_time - variable.cosmetic_time) < 0.3 ? variable.cosmetic_stable : 0.0;",
+          "variable.cosmetic_cape = math.mod(math.floor(variable.cosmetic_total / 1.0), 7.0);"
         ],
         "animate": [
           "root",
@@ -186,6 +207,9 @@
         },
         {
           "controller.render.bow_indicator": "query.is_in_ui && !query.is_riding && !query.is_gliding && (query.get_equipped_item_name(0) == 'bow' || query.get_equipped_item_name(0) == 'crossbow')"
+        },
+        {
+          "controller.render.cosmetic.cape": "variable.cosmetic_cape > 0.0 && (!variable.is_first_person || variable.is_paperdoll) && !variable.map_face_icon && !query.is_spectator && query.armor_texture_slot(1) != 5"
         }
       ],
       "enable_attachables": true

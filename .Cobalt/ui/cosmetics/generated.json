@@ -1,0 +1,394 @@
+{
+  "namespace": "Cobalt_cosmetics",
+  "content@Cobalt_common.element": {
+    "$Cobalt_type": "stack_panel",
+    "orientation": "vertical",
+    "$Cobalt_anchor": "top_middle",
+    "size": [
+      "100%",
+      "100%c + 15px"
+    ],
+    "controls": [
+      {
+        "top_spacer@Cobalt_common.element": {
+          "size": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "cape_title@Cobalt_cosmetics_template.title": {
+          "$cosmetic_title": "Capes"
+        }
+      },
+      {
+        "cape_row0@Cobalt_cosmetics_template.row": {
+          "controls": [
+            {
+              "spacer0@Cobalt_common.element": {
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            },
+            {
+              "cape_none@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "None",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_none_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 0,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/none",
+                "$cosmetic_preview_uv": [
+                  0,
+                  0
+                ],
+                "$cosmetic_preview_uv_size": [
+                  40,
+                  40
+                ],
+                "$cosmetic_preview_size": [
+                  24,
+                  24
+                ]
+              }
+            },
+            {
+              "spacer1@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "cape_minecon_2011@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "MINECON 2011",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2011_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 1,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/capes/minecon_2011",
+                "$cosmetic_preview_uv": [
+                  1,
+                  1
+                ],
+                "$cosmetic_preview_uv_size": [
+                  10,
+                  16
+                ],
+                "$cosmetic_preview_size": [
+                  30,
+                  48
+                ]
+              }
+            },
+            {
+              "spacer2@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "cape_minecon_2012@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "MINECON 2012",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2012_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 2,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/capes/minecon_2012",
+                "$cosmetic_preview_uv": [
+                  1,
+                  1
+                ],
+                "$cosmetic_preview_uv_size": [
+                  10,
+                  16
+                ],
+                "$cosmetic_preview_size": [
+                  30,
+                  48
+                ]
+              }
+            },
+            {
+              "spacer3@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "cape_minecon_2013@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "MINECON 2013",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2013_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 3,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/capes/minecon_2013",
+                "$cosmetic_preview_uv": [
+                  1,
+                  1
+                ],
+                "$cosmetic_preview_uv_size": [
+                  10,
+                  16
+                ],
+                "$cosmetic_preview_size": [
+                  30,
+                  48
+                ]
+              }
+            },
+            {
+              "spacer4@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "cape_row0_spacer@Cobalt_common.element": {
+          "size": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "cape_row1@Cobalt_cosmetics_template.row": {
+          "controls": [
+            {
+              "spacer0@Cobalt_common.element": {
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            },
+            {
+              "cape_minecon_2015@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "MINECON 2015",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2015_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 4,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/capes/minecon_2015",
+                "$cosmetic_preview_uv": [
+                  1,
+                  1
+                ],
+                "$cosmetic_preview_uv_size": [
+                  10,
+                  16
+                ],
+                "$cosmetic_preview_size": [
+                  30,
+                  48
+                ]
+              }
+            },
+            {
+              "spacer1@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "cape_minecon_2016@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "MINECON 2016",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2016_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 5,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/capes/minecon_2016",
+                "$cosmetic_preview_uv": [
+                  1,
+                  1
+                ],
+                "$cosmetic_preview_uv_size": [
+                  10,
+                  16
+                ],
+                "$cosmetic_preview_size": [
+                  30,
+                  48
+                ]
+              }
+            },
+            {
+              "spacer2@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "cape_minecon_2019@Cobalt_cosmetics_template.tile": {
+                "$cosmetic_name": "MINECON 2019",
+                "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle",
+                "$cosmetic_group": "Cobalt_cosmetic_cape_group",
+                "$cosmetic_index": 6,
+                "$cosmetic_default_index": 0,
+                "$cosmetic_preview_texture": ".Cobalt/textures/cosmetics/capes/minecon_2019",
+                "$cosmetic_preview_uv": [
+                  1,
+                  1
+                ],
+                "$cosmetic_preview_uv_size": [
+                  10,
+                  16
+                ],
+                "$cosmetic_preview_size": [
+                  30,
+                  48
+                ]
+              }
+            },
+            {
+              "spacer3@Cobalt_common.element": {
+                "size": [
+                  5,
+                  5
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "cape_row1_spacer@Cobalt_common.element": {
+          "size": [
+            5,
+            5
+          ]
+        }
+      }
+    ]
+  },
+  "bridges@Cobalt_common.element": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cape_minecon_2011_0@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2011_toggle"
+        }
+      },
+      {
+        "cape_minecon_2012_0@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2012_toggle"
+        }
+      },
+      {
+        "cape_minecon_2012_1@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2012_toggle"
+        }
+      },
+      {
+        "cape_minecon_2013_0@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2013_toggle"
+        }
+      },
+      {
+        "cape_minecon_2013_1@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2013_toggle"
+        }
+      },
+      {
+        "cape_minecon_2013_2@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2013_toggle"
+        }
+      },
+      {
+        "cape_minecon_2015_0@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2015_toggle"
+        }
+      },
+      {
+        "cape_minecon_2015_1@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2015_toggle"
+        }
+      },
+      {
+        "cape_minecon_2015_2@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2015_toggle"
+        }
+      },
+      {
+        "cape_minecon_2015_3@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2015_toggle"
+        }
+      },
+      {
+        "cape_minecon_2016_0@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2016_toggle"
+        }
+      },
+      {
+        "cape_minecon_2016_1@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2016_toggle"
+        }
+      },
+      {
+        "cape_minecon_2016_2@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2016_toggle"
+        }
+      },
+      {
+        "cape_minecon_2016_3@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2016_toggle"
+        }
+      },
+      {
+        "cape_minecon_2016_4@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2016_toggle"
+        }
+      },
+      {
+        "cape_minecon_2019_0@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle"
+        }
+      },
+      {
+        "cape_minecon_2019_1@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle"
+        }
+      },
+      {
+        "cape_minecon_2019_2@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle"
+        }
+      },
+      {
+        "cape_minecon_2019_3@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle"
+        }
+      },
+      {
+        "cape_minecon_2019_4@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle"
+        }
+      },
+      {
+        "cape_minecon_2019_5@Cobalt_cosmetics_template.bridge": {
+          "$cosmetic_toggle_name": "Cobalt_cosmetic_cape_minecon_2019_toggle"
+        }
+      }
+    ]
+  }
+}

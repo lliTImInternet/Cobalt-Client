@@ -1,0 +1,23 @@
+{
+    "namespace": "Cobalt_modules_menu_cosmetics_page",
+    "content@common.scrolling_panel": {
+        "$scrolling_content": "Cobalt_cosmetics.content",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "$show_background": false,
+        "$always_handle_scrolling": true,
+        "layer": 18,
+        "$scroll_size": [
+            3,
+            "100%"
+        ],
+        "$scroll_bar_left_padding_size": [
+            5,
+            5
+        ],
+        "size": [
+            "100%",
+            "100%"
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.cape": {
+      "geometry": "Geometry.cosmetic_cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.cape[variable.cosmetic_cape]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.cape": [
+            "Texture.cape",
+            "Texture.cosmetic_cape_minecon_2011",
+            "Texture.cosmetic_cape_minecon_2012",
+            "Texture.cosmetic_cape_minecon_2013",
+            "Texture.cosmetic_cape_minecon_2015",
+            "Texture.cosmetic_cape_minecon_2016",
+            "Texture.cosmetic_cape_minecon_2019"
+          ]
+        }
+      }
+    }
+  }
+}

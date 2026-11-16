@@ -1,0 +1,27 @@
+{
+  "debug": false,
+  "categories": [
+    {
+      "id": "cape",
+      "title": "Capes",
+      "geometry": "geometry.cape",
+      "material": "cape",
+      "texture_folder": ".Cobalt/textures/cosmetics/capes",
+      "preview": {
+        "uv": [1, 1],
+        "uv_size": [10, 16],
+        "size": [30, 48]
+      },
+      "render_condition": "(!variable.is_first_person || variable.is_paperdoll) && !variable.map_face_icon && !query.is_spectator && query.armor_texture_slot(1) != 5",
+      "default": "none",
+      "items": [
+        { "id": "minecon_2011", "name": "MINECON 2011" },
+        { "id": "minecon_2012", "name": "MINECON 2012" },
+        { "id": "minecon_2013", "name": "MINECON 2013" },
+        { "id": "minecon_2015", "name": "MINECON 2015" },
+        { "id": "minecon_2016", "name": "MINECON 2016" },
+        { "id": "minecon_2019", "name": "MINECON 2019" }
+      ]
+    }
+  ]
+}

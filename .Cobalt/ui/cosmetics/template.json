@@ -1,0 +1,163 @@
+{
+  "namespace": "Cobalt_cosmetics_template",
+
+  // One "marked" off-screen paper doll. A cosmetic is announced to the
+  // player entity by how many of these are drawn per frame
+  // (tools/build_cosmetics.py explains the whole chain).
+  // #disable_head_follow_mouse is what marks it: the renderer turns it into
+  // variable.should_look_at_target_ui = 0 on this doll.
+  "bridge@Cobalt_common.element": {
+    "$Cobalt_type": "custom",
+    "renderer": "paper_doll_renderer",
+    "$Cobalt_anchor": "top_left",
+    "layer": 1,
+    "size": "$cosmetic_bridge_size",
+    "offset": "$cosmetic_bridge_offset",
+    "$cosmetic_bridge_size|default": [
+      2,
+      2
+    ],
+    "$cosmetic_bridge_offset|default": [
+      0,
+      4000
+    ],
+    "property_bag": {
+      "#disable_head_follow_mouse": true
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$cosmetic_toggle_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "tile@Cobalt_common.internal": {
+    "$Cobalt_internal": "rounded_bg",
+    "color": "$second_color",
+    "layer": 1,
+    "size": [
+      "23%",
+      100
+    ],
+    "controls": [
+      {
+        "name@Cobalt_common.element": {
+          "$Cobalt_type": "label",
+          "$Cobalt_anchor": "top_middle",
+          "text": "$cosmetic_name",
+          "font_type": "$cobalt_font",
+          "font_scale_factor": 0.8,
+          "color": "$reverse_color",
+          "layer": 2,
+          "offset": [
+            0,
+            6
+          ],
+          "size": [
+            "default",
+            "default"
+          ]
+        }
+      },
+      {
+        "preview@Cobalt_common.element": {
+          "$Cobalt_type": "image",
+          "texture": "$cosmetic_preview_texture",
+          "uv": "$cosmetic_preview_uv",
+          "uv_size": "$cosmetic_preview_uv_size",
+          "size": "$cosmetic_preview_size",
+          "layer": 2,
+          "offset": [
+            0,
+            -3
+          ]
+        }
+      },
+      {
+        "button@Cobalt_toggle.Cobalt_tab_toggle": {
+          "$toggle_view_binding_name": "$cosmetic_toggle_name",
+          "$toggle_name": "$cosmetic_group",
+          "$toggle_group_forced_index": "$cosmetic_index",
+          "$toggle_group_default_selected": "$cosmetic_default_index",
+          "$toggle_tab_focus_binding_name": "#Cobalt_modules_focus_precedence",
+          "$custom_content": "Cobalt_cosmetics_template.equip_text",
+          "$button_default_texture": ".Cobalt/textures/mod_menu/module_toggle_settings",
+          "$button_hover_texture": ".Cobalt/textures/mod_menu/module_toggle_settings",
+          "$button_pressed_texture": ".Cobalt/textures/mod_menu/module_toggle_settings",
+          "$button_pressed_hover_texture": ".Cobalt/textures/mod_menu/module_toggle_settings",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 2,
+          "size": [
+            "100%",
+            20
+          ],
+          "$default_color": [
+            0.341,
+            0.341,
+            0.341
+          ],
+          "$hover_color": "@Cobalt_hover_animation.1_color_gray",
+          "$pressed_color": [
+            0,
+            1,
+            0.129
+          ],
+          "$pressed_hover_color": "@Cobalt_hover_animation.1_color_green"
+        }
+      }
+    ]
+  },
+
+  "equip_text@Cobalt_toggle.button_text": {
+    "variables": [
+      {
+        "requires": "($module_toggle_text = 'Enabled')",
+        "$button_text": "Equipped"
+      },
+      {
+        "requires": "(not ($module_toggle_text = 'Enabled'))",
+        "$button_text": "Equip"
+      }
+    ]
+  },
+
+  "row@Cobalt_common.element": {
+    "$Cobalt_type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      100
+    ]
+  },
+
+  "title@Cobalt_common.element": {
+    "size": [
+      "100%",
+      20
+    ],
+    "controls": [
+      {
+        "text@Cobalt_common.element": {
+          "$Cobalt_type": "label",
+          "$Cobalt_anchor": "left_middle",
+          "text": "$cosmetic_title",
+          "font_type": "$cobalt_font",
+          "color": "$reverse_color",
+          "layer": 2,
+          "offset": [
+            12,
+            0
+          ],
+          "size": [
+            "default",
+            "default"
+          ]
+        }
+      }
+    ]
+  }
+}

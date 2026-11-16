@@ -202,6 +202,35 @@
                         25
                       ]
                     }
+                  },
+                  {
+                    "cosmetics@Cobalt_toggle.Cobalt_tab_toggle": {
+                      "$button_icon": ".Cobalt/textures/icons/cosmetics",
+                      "$custom_content": "Cobalt_button.button_icon",
+                      "$button_hover_texture": ".Cobalt/textures/White",
+                      "$button_pressed_texture": ".Cobalt/textures/White",
+                      "$button_pressed_hover_texture": ".Cobalt/textures/White",
+                      "$toggle_view_binding_name": "Cobalt_modules_menu_cosmetics_page_toggle",
+                      "$toggle_group_forced_index": 50,
+                      "$default_alpha": 0,
+                      "$hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$pressed_alpha": 0.3,
+                      "$pressed_hover_alpha": "@Cobalt_hover_animation.1_alpha",
+                      "$hover_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "$pressed_color": [
+                        0,
+                        1,
+                        1
+                      ],
+                      "size": [
+                        25,
+                        25
+                      ]
+                    }
                   }
                 ]
               }
@@ -305,6 +334,18 @@
                   {
                     "binding_type": "view",
                     "source_control_name": "Cobalt_modules_menu_info_page_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "cosmetics@Cobalt_modules_menu_cosmetics_page.content": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "Cobalt_modules_menu_cosmetics_page_toggle",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
                   }
